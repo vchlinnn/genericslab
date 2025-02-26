@@ -111,4 +111,51 @@ public class LinkedList<T> {
             }
         }
     }
+    
+    public void intersperse(T sep) {
+        if (first == null) {
+            return;
+        } else {
+            Node<T> cur = first;
+            while (cur.next != null) {
+                Node<T> newNode = new Node<>(sep, cur.next);
+                cur = newNode;
+                cur = cur.next;
+            } 
+        }
+    }
+    
+    /* We cannot implement this because there is no way to compare the value with T 
+    without knowing what type is T
+    */
+    public T maximum() {
+//        if (first == null) {
+//            return null;
+//        } else {
+//            T max = first.value;
+//            Node<T> cur = first;
+//            while (cur.next != null) {
+//                if (cur.value > max) {
+//                    max = cur.value;
+//                    cur = cur.next;
+//                }
+//            } 
+//        }
+        throw new UnsupportedOperationException();
+    }
+    
+    /* We cannot implement this because there is no way to convert T to a string
+    without knowing what type is T
+    */
+    @Override
+    public String toString() {
+        throw new UnsupportedOperationException();
+    }
+    
+    /* We cannot implement this because there is no way to compare the value of  T 
+    without knowing what type is T
+    */
+    public void insertionSort() {
+        throw new UnsupportedOperationException();
+    }
 }
